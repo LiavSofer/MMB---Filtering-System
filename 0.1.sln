@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "0.1", "0.1\0.1.csproj", "{5
 EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "MMB - Filtering System Installer", "MMB - Filtering System Installer\MMB - Filtering System Installer.vdproj", "{BC8FA122-51A7-4B78-BA45-A19CF2CC4648}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MMB - Service", "..\..\..\..\..\source\repos\WinServicePlus1\WindowsService1\MMB - Service.csproj", "{4F1A7280-CE06-402E-9A0B-0D4A0E86CCA7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MMB - Service", "MMB - Service\MMB - Service.csproj", "{4F1A7280-CE06-402E-9A0B-0D4A0E86CCA7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
