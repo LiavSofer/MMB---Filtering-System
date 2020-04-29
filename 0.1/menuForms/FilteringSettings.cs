@@ -11,9 +11,12 @@ namespace _0._1.menuForms
             UpdateTogglesGUI();
             try
             {
-                foreach (string site in Resources.profile.Default.customBlacklist)
+                if(Resources.profile.Default.customBlacklist!=null)
                 {
-                    blockedUrlListBox.Items.Add(site);
+                    foreach (string site in Resources.profile.Default.customBlacklist)
+                    {
+                        blockedUrlListBox.Items.Add(site);
+                    }
                 }
             }
             catch

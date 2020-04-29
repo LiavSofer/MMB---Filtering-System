@@ -114,9 +114,13 @@ namespace _0._1
                 {
                     string localDataPath = Environment.ExpandEnvironmentVariables("%localappdata%") + @"\MMB\";
 
-                    //Delete the appData
-                    Directory.Delete(localDataPath,true);
-
+                    try
+                    {
+                        //Delete the appData
+                        Directory.Delete(localDataPath, true);
+                    }
+                    catch
+                    {}
                     //Set dhcp dns
                     DnsController.setMode(false);
 

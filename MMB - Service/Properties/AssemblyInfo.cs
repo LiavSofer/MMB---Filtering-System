@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("MMB - Service")]
+[assembly: AssemblyTitle("WindowsService1")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("MMB - Service")]
+[assembly: AssemblyProduct("WindowsService1")]
 [assembly: AssemblyCopyright("Copyright ©  2020")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("cccbbb55-2a38-4363-b518-9ecfb70743b6")]
+[assembly: Guid("4f1a7280-ce06-402e-9a0b-0d4a0e86cca7")]
 
 // Version information for an assembly consists of the following four values:
 //

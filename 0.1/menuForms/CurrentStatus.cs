@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Drawing;
+using System.IO;
 using System.Windows.Forms;
 
 namespace _0._1.menuForms
@@ -10,7 +11,6 @@ namespace _0._1.menuForms
         {
             InitializeComponent();
             UpdateTogglesGUI();
-            CheckStatus();
             FontSetup();
         }
 
@@ -46,7 +46,7 @@ namespace _0._1.menuForms
 
         private void UpdateTogglesGUI()
         {
-            FilterStatusToggle.Image = FilteringSystem.IsOn()? Properties.Resources.On : Properties.Resources.Off;
+            FilterStatusToggle.Image = FilteringSystem.IsOn() ? Properties.Resources.On : Properties.Resources.Off;
             if (FilteringSystem.IsOn())
             {
                 scheduelStatusToggle.Image = FilteringSystem.IsScheduelActive() ? Properties.Resources.On : Properties.Resources.Off;
@@ -142,6 +142,24 @@ namespace _0._1.menuForms
         private void currentServerLabel_Click(object sender, EventArgs e)
         {
             MessageBox.Show(DnsController.isSafe(true).ToString());
+        }
+
+        private void CloseingPreventionStatusLabel_Click(object sender, EventArgs e)
+        {
+            if (CloseingPreventionChecking() == false)
+            {
+                try
+                {
+                    string servicePath = (System.Reflection.Assembly.GetExecutingAssembly().CodeBase).Replace("file:///", "").Replace("MMB-Filter.exe", "MMB-Service.exe");
+                    MessageBox.Show(servicePath.Replace("MMB-Filter.exe", "MMB - Service.exe") + "    ," + File.Exists(servicePath));
+                    ServiceAdapter.InstallService(servicePath);
+                    ServiceAdapter.StartService("GUIAdapter", 10000);
+                }
+                catch
+                {
+                    MessageBox.Show("לא ניתן להתקין תוסף שירות");
+                }
+            }
         }
     }
 }

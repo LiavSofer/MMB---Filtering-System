@@ -68,12 +68,17 @@ namespace _0._1
 
         public static void CustomCommend(string serviceName,int commend)
         {
-            ServiceController sc = new ServiceController(serviceName);
-            ServiceControllerPermission scp = new ServiceControllerPermission(ServiceControllerPermissionAccess.Control, Environment.MachineName, serviceName);//this will grant permission to access the Service
-            scp.Assert();
-            sc.Refresh();
-
-            sc.ExecuteCommand(commend);
+            try
+            {
+                ServiceController sc = new ServiceController(serviceName);
+                ServiceControllerPermission scp = new ServiceControllerPermission(ServiceControllerPermissionAccess.Control, Environment.MachineName, serviceName);//this will grant permission to access the Service
+                scp.Assert();
+                sc.Refresh();
+                sc.ExecuteCommand(commend);
+            }
+            catch
+            {
+            }
         }
 
         public static void StartInternetBlocking()

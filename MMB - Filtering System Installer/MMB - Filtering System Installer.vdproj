@@ -27,13 +27,13 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_90AAC4DBE28047879595CAA119D7F1F6"
+        "MsmKey" = "8:_D98249A25B5B48309B648B2B1BFE322D"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_D98249A25B5B48309B648B2B1BFE322D"
+        "MsmKey" = "8:_FCDBF74A4DBC41979C8F40EB12EEE391"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -46,7 +46,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_90AAC4DBE28047879595CAA119D7F1F6"
+        "OwnerKey" = "8:_FCDBF74A4DBC41979C8F40EB12EEE391"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -202,7 +202,7 @@
         {
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_05EA305D6DD54F519FE98C3955F7AD41"
             {
-            "SourcePath" = "8:..\\..\\..\\Filter 0.2\\graphics\\installation banner.jpg"
+            "SourcePath" = "8:installation banner.jpg"
             "TargetName" = "8:installation banner.jpg"
             "Tag" = "8:"
             "Folder" = "8:_CB401FB25E9C418B8D7F56A3633AC787"
@@ -222,8 +222,8 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D98249A25B5B48309B648B2B1BFE322D"
             {
-            "SourcePath" = "8:..\\..\\..\\Filter 0.2\\graphics\\icons\\active_icon.ico"
-            "TargetName" = "8:active_icon.ico"
+            "SourcePath" = "8:logo_icon.ico"
+            "TargetName" = "8:logo_icon.ico"
             "Tag" = "8:"
             "Folder" = "8:_CB401FB25E9C418B8D7F56A3633AC787"
             "Condition" = "8:"
@@ -308,7 +308,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:MMB - Filtering System"
         "ProductCode" = "8:{8B306F13-E633-41BC-9219-0682537A2743}"
-        "PackageCode" = "8:{4B4892E3-C30E-4D6A-B1BC-2A0CF4BC1F85}"
+        "PackageCode" = "8:{1F115A20-7411-4D1E-8771-91D58A2C6558}"
         "UpgradeCode" = "8:{7DB68BB3-3FE4-4B97-A9D3-6EF99A8007C5}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
@@ -907,9 +907,9 @@
                 {
                 }
             }
-            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_90AAC4DBE28047879595CAA119D7F1F6"
+            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_FCDBF74A4DBC41979C8F40EB12EEE391"
             {
-            "SourcePath" = "8:..\\..\\..\\..\\..\\..\\source\\repos\\WinServicePlus1\\WindowsService1\\obj\\Debug\\MMB-Service.exe"
+            "SourcePath" = "8:..\\MMB - Service\\obj\\Debug\\MMB-Service.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_CB401FB25E9C418B8D7F56A3633AC787"

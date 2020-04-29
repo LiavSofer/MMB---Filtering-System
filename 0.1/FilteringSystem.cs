@@ -16,9 +16,12 @@ namespace _0._1
             if (!File.Exists(uninstallPassPath))
                 File.Create(uninstallPassPath);
 
-            DeleteServiceInstallationLog();
-            HideEXE();
-            HideAppFolder();
+            /*
+             * this part of the code shouldn't be in the debuging version because it lock the exe file and prevent the next debeguing...
+                DeleteServiceInstallationLog();
+                HideEXE();
+                HideAppFolder();
+            */
 
             HostsFileCatcher.AddPath(Environment.SystemDirectory + @"\drivers\etc\hosts");
             HostsFileCatcher.AddPath(uninstallPassPath);

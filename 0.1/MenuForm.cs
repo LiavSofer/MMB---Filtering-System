@@ -98,18 +98,23 @@ namespace _0._1
 
         public void SetStatusIcon(StatusIcon statusIcon)
         {
-            switch(statusIcon)
+            try
             {
-                case StatusIcon.green:
-                    StatusIconPB.Image = Properties.Resources.green_v;
-                    break;
-                case StatusIcon.yellow:
-                    StatusIconPB.Image = Properties.Resources.attention;
-                    break;
-                case StatusIcon.red:
-                    StatusIconPB.Image = Properties.Resources.critical_attention;
-                    break;
+                switch(statusIcon)
+                {
+                    case StatusIcon.green:
+                        StatusIconPB.Image = Properties.Resources.green_v;
+                        break;
+                    case StatusIcon.yellow:
+                        StatusIconPB.Image = Properties.Resources.attention;
+                        break;
+                    case StatusIcon.red:
+                        StatusIconPB.Image = Properties.Resources.critical_attention;
+                        break;
+                }
             }
+            catch
+            {}
         }
 
         private void exitButton_Click(object sender, EventArgs e)
@@ -119,21 +124,17 @@ namespace _0._1
             {
                 exitButton.Text = "יוצא....";
                 CustomNotifyIcon.hide();
-                ServiceAdapter.StopService("GUIAdapter", 10000);
-                while (ServiceAdapter.GetServiceStatus("GUIAdapter") != "Stopped")
+                if (ServiceAdapter.GetServiceStatus("GUIAdapter") == "Running")
                 {
-                    exitButton.Text = ServiceAdapter.GetServiceStatus("GUIAdapter");
                     ServiceAdapter.StopService("GUIAdapter", 10000);
-                    System.Threading.Thread.Sleep(3000);
+                    while (ServiceAdapter.GetServiceStatus("GUIAdapter") != "Stopped")
+                        {
+                        exitButton.Text = ServiceAdapter.GetServiceStatus("GUIAdapter");
+                        ServiceAdapter.StopService("GUIAdapter", 10000);
+                        System.Threading.Thread.Sleep(3000);
+                        }
                 }
                 InternetBlocker.block(false);
-
-                //just for debuging... this part shuoldn't be in the final version.
-                FilteringSystem.ShowAppDataFolder();
-                FilteringSystem.ShowAppFolder();
-                FilteringSystem.ShowEXE();
-                ///thr end.
-
                 Application.ExitThread();
             }
         }
