@@ -176,7 +176,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="ServiceAdapter.cs" />
-    <Compile Include="SystemConfiguration.cs" />
     <Compile Include="menuForms\CurrentStatus.cs">
       <SubType>UserControl</SubType>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
